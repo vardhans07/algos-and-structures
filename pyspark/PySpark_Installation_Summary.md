@@ -131,3 +131,52 @@ The installation was verified by running the `pyspark` command in the Command Pr
 
 ---
 **Status:** Successfully Configured.
+
+
+
+<img width="1462" height="587" alt="image" src="https://github.com/user-attachments/assets/921405ba-e548-4568-8383-96cc151d3b51" />
+
+# Create a simple list of data
+data = [("MERN Stack", 10), ("PySpark", 5), ("PostgreSQL", 8), ("React", 12)]
+
+# Define column names
+columns = ["Technology", "Difficulty_Score"]
+
+# Create the DataFrame
+df = spark.createDataFrame(data, columns)
+
+# Show the results
+df.show()
+
+
+
+Basic Data Operations
+You can filter and group data just like SQL:
+
+# Filter for difficult technologies
+hard_techs = df.filter(df.Difficulty_Score > 7)
+hard_techs.show()
+
+# Sort by difficulty
+df.sort("Difficulty_Score", ascending=False).show()
+
+
+Reading a Local File
+If you have a CSV file on your D: drive, you can load it into Spark:
+
+# Replace with an actual path to a CSV on your laptop
+path = "D:/C/data_sample.csv"
+
+# Read the file
+file_df = spark.read.csv(path, header=True, inferSchema=True)
+file_df.printSchema()
+
+To exit the PySpark shell, simply type:
+
+exit()
+
+
+
+<img width="1742" height="926" alt="image" src="https://github.com/user-attachments/assets/86d0bff0-8c7a-4f17-9271-2db5f7f389d5" />
+
+
