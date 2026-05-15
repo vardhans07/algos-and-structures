@@ -1,3 +1,7 @@
+<img width="982" height="493" alt="image" src="https://github.com/user-attachments/assets/4624c742-2764-47b4-886b-a8a86f84e15c" />
+
+
+
 # # PySpark Installation & Troubleshooting Summary
 
 This document summarizes the steps taken to successfully install and configure Apache Spark (PySpark) on a Windows environment (Acer Nitro 5), including the specific bugs encountered and how they were resolved.
